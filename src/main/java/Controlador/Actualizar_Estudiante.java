@@ -10,6 +10,7 @@ import Modelo.Datos_Basico_Estudiante;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URISyntaxException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -35,7 +36,7 @@ public class Actualizar_Estudiante extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, SQLException {
+            throws ServletException, IOException, SQLException, URISyntaxException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
@@ -322,6 +323,8 @@ public class Actualizar_Estudiante extends HttpServlet {
             processRequest(request, response);
         } catch (SQLException ex) {
             Logger.getLogger(Actualizar_Estudiante.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(Actualizar_Estudiante.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -339,6 +342,8 @@ public class Actualizar_Estudiante extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
+            Logger.getLogger(Actualizar_Estudiante.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
             Logger.getLogger(Actualizar_Estudiante.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

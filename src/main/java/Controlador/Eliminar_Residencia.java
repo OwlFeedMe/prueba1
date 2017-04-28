@@ -10,6 +10,7 @@ import Modelo.Datos_Basico_Residencia;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URISyntaxException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -35,7 +36,7 @@ public class Eliminar_Residencia extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, SQLException {
+            throws ServletException, IOException, SQLException, URISyntaxException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
 
@@ -290,6 +291,8 @@ public class Eliminar_Residencia extends HttpServlet {
             processRequest(request, response);
         } catch (SQLException ex) {
             Logger.getLogger(Eliminar_Residencia.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(Eliminar_Residencia.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -307,6 +310,8 @@ public class Eliminar_Residencia extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
+            Logger.getLogger(Eliminar_Residencia.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
             Logger.getLogger(Eliminar_Residencia.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
