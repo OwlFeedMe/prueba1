@@ -104,6 +104,10 @@
         <servlet-name>Actualizar_AsignarEstudiante</servlet-name>
         <servlet-class>Controlador.Actualizar_AsignarEstudiante</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>index</servlet-name>
+        <servlet-class>Controlador.index</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Home</servlet-name>
         <url-pattern>/Home</url-pattern>
@@ -205,8 +209,12 @@
         <url-pattern>/Actualizar_Estudiante</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>Actualizar_AsignarEstudiante</servlet-name>
-        <url-pattern>/Actualizar_AsignarEstudiante</url-pattern>
+        <servlet-name>Actualizar_Estudiante</servlet-name>
+        <url-pattern>/Actualizar_Estudiante</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>index</servlet-name>
+        <url-pattern>/index</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
