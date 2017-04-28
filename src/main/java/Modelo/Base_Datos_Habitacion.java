@@ -1,5 +1,7 @@
 package Modelo;
 
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -19,47 +21,25 @@ import java.util.Date;
 public class Base_Datos_Habitacion {
     public Datos_Basico_Habitacion obj;
     public Connection connection;
-    public void conectar(){
-        
-        System.out.println("-------- MySQL JDBC Connection Testing ------------");
+public void conectar() throws URISyntaxException {   URI dbUri = new URI(System.getenv("DATABASE_URL"));
+            String username = dbUri.getUserInfo().split(":")[0];
+            String password = dbUri.getUserInfo().split(":")[1];
+            String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
+    
+		   
+			  	try {
+					connection = DriverManager.getConnection(dbUrl, username, password);
+                        	} catch (SQLException e) {
+					System.out.println("Connection Failed! Check output console");
+					e.printStackTrace();
+				}
 
-	try {
-		Class.forName("com.mysql.jdbc.Driver").newInstance();
-	
-	} catch (ClassNotFoundException e) {
-		System.out.println("Where is your MySQL JDBC Driver?");
-		e.printStackTrace();
-		return;
-	} catch (InstantiationException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	} catch (IllegalAccessException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-
-	System.out.println("MySQL JDBC Driver Registered!");
+				
+		   
+		  
 	
 
-	try {
-		connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/public","root", "root");
-
-	} catch (SQLException e) {
-		System.out.println("Connection Failed! Check output console");
-		e.printStackTrace();
-		return;
-	}
-
-	if (connection != null) {
-		System.out.println("You made it, take control your database now!");
-	} else {
-		System.out.println("Failed to make connection!");
-	}
-        
-        
-        
-	
-     }
+    }
     public void desconectar(){
         try {
 		connection.close();
