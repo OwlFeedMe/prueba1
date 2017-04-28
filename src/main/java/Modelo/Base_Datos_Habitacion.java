@@ -42,7 +42,7 @@ public class Base_Datos_Habitacion {
 	
 
 	try {
-		connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/uliving","root", "root");
+		connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/public","root", "root");
 
 	} catch (SQLException e) {
 		System.out.println("Connection Failed! Check output console");
