@@ -6,6 +6,8 @@
 package Controlador;
 
 
+import Modelo.Base_Datos_Residencia;
+import Modelo.Datos_Basico_Residencia;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Paint;
@@ -75,28 +77,30 @@ public class ChartServlet extends HttpServlet {
 
     public JFreeChart getChart() throws URISyntaxException {
 //
-//        DefaultPieDataset dataset = new DefaultPieDataset();
-//        Crear la capa de servicios que se enlace con el DAO
-//
-//        List<Colmena> arr = new LinkedList();
-//        DatosDao vis = new DatosDao();
-//        arr = vis.findAll3();
-//        double[][] data = new double[1][arr.size()];
-//        int j = 0;
-//        for (int i = 0; i < arr.size(); i++) {
-//            dataset.setValue(String.valueOf("Colmena ID: "+arr.get(i).getId_colmena()), arr.get(i).getPcalimento());
-//        }
-//
-//        JFreeChart chart = ChartFactory.createPieChart(
-//                "Porcentaje de paneles con Alimentos", // chart title
-//                dataset, // dataset
-//                true, // include legend
-//                true,
-//                false
-//        );
-//        PiePlot plot = (PiePlot) chart.getPlot();
-//        plot.setNoDataMessage("No data available");
-//        plot.setExplodePercent(1, 0.30);
+        DefaultPieDataset dataset = new DefaultPieDataset();
+   
+
+        List<Datos_Basico_Residencia> arr = new LinkedList();
+        Base_Datos_Residencia vis = new Base_Datos_Residencia();
+        vis.conectar();
+        arr = vis.cargar();
+        vis.desconectar();
+        double[][] data = new double[1][arr.size()];
+        int j = 0;
+        for (int i = 0; i < arr.size(); i++) {
+            dataset.setValue(String.valueOf("Residencia ID: "+arr.get(i).getId_Residencia()), arr.get(i).getNumero_Habitacion());
+        }
+
+        JFreeChart chart = ChartFactory.createPieChart(
+                "Porcentaje de habitaciones por residencia", // chart title
+                dataset, // dataset
+                true, // include legend
+                true,
+                false
+        );
+        PiePlot plot = (PiePlot) chart.getPlot();
+        plot.setNoDataMessage("No data available");
+        plot.setExplodePercent(1, 0.30);
 
         return null;
     }
