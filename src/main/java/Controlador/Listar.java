@@ -245,7 +245,8 @@ public class Listar extends HttpServlet {
                         response.setContentType("text/html");
                         PrintWriter outs3 = response.getWriter();
                         String docType3
-                                = "<!DOCTYPE html PUBLIC -//W3C//DTD HTML 4.01//EN http://www.w3.org/TR/html4/strict.dtd>\n";
+                                = "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \n" +
+"    \"http://www.w3.org/TR/html4/loose.dtd\">";
                         out.println(docType3
                                 + "<html>\n"
                                 + "<style type=\"text/css\">\n"
