@@ -293,6 +293,7 @@ public class Listar extends HttpServlet {
                                 + " </table>\n"
                                 + " <br>\n"
                                 + "</form>\n"
+                                +"<img src=\"ChartServlet1\"  align=\"left\"/>"
                                 + "</body>\n"
                                 + "</html>");
 

@@ -5,6 +5,14 @@
         <servlet-class>Controlador.Home</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>ChartServlet1</servlet-name>
+        <servlet-class>Controlador.ChartServlet1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ChartServlet</servlet-name>
+        <servlet-class>Controlador.ChartServlet</servlet-class>
+    </servlet>    
+    <servlet>
         <servlet-name>Proveedores</servlet-name>
         <servlet-class>Controlador.Proveedores</servlet-class>
     </servlet>
@@ -215,6 +223,14 @@
     <servlet-mapping>
         <servlet-name>index</servlet-name>
         <url-pattern>/index</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ChartServlet1</servlet-name>
+        <url-pattern>/ChartServlet1</url-pattern>
+    </servlet-mapping>
+      <servlet-mapping>
+        <servlet-name>ChartServlet</servlet-name>
+        <url-pattern>/ChartServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
