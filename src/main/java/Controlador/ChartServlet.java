@@ -80,17 +80,16 @@ public class ChartServlet extends HttpServlet {
         DefaultPieDataset dataset = new DefaultPieDataset();
    
 
-//        List<Datos_Basico_Residencia> arr = new LinkedList();
-//        Base_Datos_Residencia vis = new Base_Datos_Residencia();
-//        vis.conectar();
-//        arr = vis.cargar();
-//        vis.desconectar();
+        List<Datos_Basico_Residencia> arr = new LinkedList();
+        Base_Datos_Residencia vis = new Base_Datos_Residencia();
+        vis.conectar();
+        arr = vis.cargar();
+        vis.desconectar();
         
-//        for (int i = 0; i < arr.size(); i++) {
-//            dataset.setValue(String.valueOf("Residencia ID: "+arr.get(i).getId_Residencia()), arr.get(i).getNumero_Habitacion());
-//        }
-dataset.setValue("jeje", 15);
-dataset.setValue("jejeasd", 16);
+        for (int i = 0; i < arr.size(); i++) {
+            dataset.setValue(String.valueOf("Residencia ID: "+arr.get(i).getId_Residencia()), arr.get(i).getNumero_Habitacion());
+        }
+
         JFreeChart chart = ChartFactory.createPieChart(
                 "Porcentaje de habitaciones por residencia", // chart title
                 dataset, // dataset
@@ -102,7 +101,7 @@ dataset.setValue("jejeasd", 16);
         plot.setNoDataMessage("No data available");
         plot.setExplodePercent(1, 0.30);
 
-        return null;
+        return chart;
     }
 
 }
