@@ -76,9 +76,9 @@ public class ChartServlet1 extends HttpServlet {
 
     public JFreeChart getChart2() throws URISyntaxException {
 
-        List<Datos_Basico_Estudiante> arr = new LinkedList();
-        Base_Datos_Estudiantes vis = new Base_Datos_Estudiantes();
-        arr = vis.cargar();
+//        List<Datos_Basico_Estudiante> arr = new LinkedList();
+//        Base_Datos_Estudiantes vis = new Base_Datos_Estudiantes();
+//        arr = vis.cargar();
       
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();
 //        for (int i = 0; i < arr.size(); i++) {
