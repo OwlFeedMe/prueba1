@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.crunchify.jsp.servlet;
+package Controlador;
 
 
 import java.awt.BasicStroke;
@@ -74,31 +74,31 @@ public class ChartServlet extends HttpServlet {
 
 
     public JFreeChart getChart() throws URISyntaxException {
+//
+//        DefaultPieDataset dataset = new DefaultPieDataset();
+//        Crear la capa de servicios que se enlace con el DAO
+//
+//        List<Colmena> arr = new LinkedList();
+//        DatosDao vis = new DatosDao();
+//        arr = vis.findAll3();
+//        double[][] data = new double[1][arr.size()];
+//        int j = 0;
+//        for (int i = 0; i < arr.size(); i++) {
+//            dataset.setValue(String.valueOf("Colmena ID: "+arr.get(i).getId_colmena()), arr.get(i).getPcalimento());
+//        }
+//
+//        JFreeChart chart = ChartFactory.createPieChart(
+//                "Porcentaje de paneles con Alimentos", // chart title
+//                dataset, // dataset
+//                true, // include legend
+//                true,
+//                false
+//        );
+//        PiePlot plot = (PiePlot) chart.getPlot();
+//        plot.setNoDataMessage("No data available");
+//        plot.setExplodePercent(1, 0.30);
 
-        DefaultPieDataset dataset = new DefaultPieDataset();
-        //Crear la capa de servicios que se enlace con el DAO
-
-        List<Colmena> arr = new LinkedList();
-        DatosDao vis = new DatosDao();
-        arr = vis.findAll3();
-        double[][] data = new double[1][arr.size()];
-        int j = 0;
-        for (int i = 0; i < arr.size(); i++) {
-            dataset.setValue(String.valueOf("Colmena ID: "+arr.get(i).getId_colmena()), arr.get(i).getPcalimento());
-        }
-
-        JFreeChart chart = ChartFactory.createPieChart(
-                "Porcentaje de paneles con Alimentos", // chart title
-                dataset, // dataset
-                true, // include legend
-                true,
-                false
-        );
-        PiePlot plot = (PiePlot) chart.getPlot();
-        plot.setNoDataMessage("No data available");
-        plot.setExplodePercent(1, 0.30);
-
-        return chart;
+        return null;
     }
 
 }
