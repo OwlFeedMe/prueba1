@@ -380,90 +380,13 @@ public class Listar extends HttpServlet {
                                 + " </table>\n"
                                 + " <br>\n"
                                 + "</form>\n"
+                                +"<img src=\"ChartServlet3\"  align=\"left\"/>"
                                 + "</body>\n"
                                 + "</html>");
 
                         d = "";
                         break;
-                    case "5.Estudiante y su Habitacion":
-// at6.removeAll(at6);
-//                        at6= bd6.cargar();
-//                        String z = "";
-//                        for (int i = 0; i < at6.size(); i++) {
-//                         
-//                        }
-//                        for (int i = 0; i < at6.size(); i++) {
-//                            z = z + "            <tr>\n"
-//                                    + "              <td style=width: 130px;>" + "Id: " + at6.get(i).getIdEstudiante() + "<br>\n"
-//                                    + "              </td>\n"
-//                                    + "              <td style=width: 130px;>" + "IdResidencia: " + at6.get(i).getIdResidencia() + "<br>\n"
-//                                    + "              </td>\n"
-//                                      + "              <td style=width: 130px;>" + "IdHabitacion: " + at6.get(i).getIdHabitacion() + "<br>\n"
-//                                    + "              </td>\n"
-//                                    + "              <td style=width: 130px;>" + "Fecha de inicio: " + at6.get(i).getFechaInS() + "<br>\n"
-//                                    + "              </td>\n"
-//                                    + "              <td style=width: 130px;>" + "Fecha de finalizacion: " + at6.get(i).getFechaFinS() + "<br>\n"
-//                                    + "              </td>\n"
-//                                    
-//                                    + "            </tr>\n";
-//                        }
-//                        response.setContentType("text/html");
-//                        PrintWriter outs6 = response.getWriter();
-//                        String docType6
-//                                = "<!DOCTYPE html PUBLIC -//W3C//DTD HTML 4.01//EN http://www.w3.org/TR/html4/strict.dtd>\n";
-//                        out.println(docType6
-//                                + "<html>\n"
-//                                + "<head>\n"
-//                                + " <meta content=text/html; charset=ISO-8859-1\n"
-//                                + " http-equiv=content-type>\n"
-//                                + " <title></title>\n"
-//                                + "</head>\n"
-//                                + "<body>\n"
-//                                + "<form action=Listar name=Listar method=post>\n"
-//                                + "  <table style=text-align: left; width: 100px; border=1\n"
-//                                + "cellpadding=2 cellspacing=2>\n"
-//                                + "    <tbody>\n"
-//                                + "      <tr>\n"
-//                                + "        <td><img style=width: 546px; height: 279px;\n"
-//                                + "src=./Imagenes/Img_Listar.jpg\n"
-//                                + " alt=></td>\n"
-//                                + "      </tr>\n"
-//                                + "      <tr>\n"
-//                                + "        <td>Categoria de la lista:\n"
-//                                + "        <select name=selCombo size=1>\n"
-//                                + "        <option value=1.Proveedores>1.Proveedores </option>\n"
-//                                + "        <option value=2.Residencia>2.Residencia</option>\n"
-//                                + "        <option value=3.Estudiantes>3.Estudiantes</option>\n"
-//                                + "        <option value=4.Aseo>4.Aseo</option>\n"
-//                                + "<option value=\"5.Estudiante y su Habitacion\">5.Estudiante\n"
-//                                + "y su Habitacion</option>\n"
-//                                + "        <option value=\"6.Residencia y sus Habitaciones\">6.Residencia\n"
-//                                + "y sus Habitaciones</option>"
-//                                + "        </select>\n"
-//                                + "        </td>\n"
-//                                + "      </tr>\n"
-//                                + "      <tr>\n"
-//                                + "        <td style=text-align: center;><input\n"
-//                                + " name=Boton value=Cargar type=submit></td>\n"
-//                                + "      </tr>\n"
-//                                + "      <tr>\n"
-//                                + "        <td>\n"
-//                                + "        <table style=text-align: left; width: 545px; height: 32px;\n"
-//                                + "border=1 cellpadding=2 cellspacing=2>\n"
-//                                + "          <tbody>\n"
-//                                + z + "         </tbody>\n"
-//                                + "       </table>\n"
-//                                + "       </td>\n"
-//                                + "     </tr>\n"
-//                                + "   </tbody>\n"
-//                                + " </table>\n"
-//                                + " <br>\n"
-//                                + "</form>\n"
-//                                + "</body>\n"
-//                                + "</html>");
-//
-//                        z = "";
-                        break;
+                   
                     case "6.Residencia y sus Habitaciones":
 //                     
                         at4.removeAll(at4);
