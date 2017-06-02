@@ -88,7 +88,7 @@ public class ChartServlet1 extends HttpServlet {
 //           
 //        }
 
-        dataset.addValue(0,"hola","pepe");   
+        dataset.addValue(10,"hola","pepe");   
          
         
 
