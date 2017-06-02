@@ -234,7 +234,7 @@ public class Listar extends HttpServlet {
                         b = "";
                         break;
                     case "3.Estudiantes":
-                        response.setContentType("image/png");
+                        
                         OutputStream outputStream = response.getOutputStream();
 
                         JFreeChart chart = getChart2();
