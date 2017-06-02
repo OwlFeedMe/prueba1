@@ -6,7 +6,7 @@ package Controlador;
 
 import Modelo.Base_Datos_Estudiantes;
 import Modelo.Datos_Basico_Estudiante;
-import com.crunchify.jsp.servlet.CustomRenderer;
+import Controlador.CustomRenderer;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Paint;
