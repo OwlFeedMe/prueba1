@@ -78,19 +78,20 @@ public class ChartServlet1 extends HttpServlet {
 
         List<Datos_Basico_Estudiante> arr = new LinkedList();
         Base_Datos_Estudiantes vis = new Base_Datos_Estudiantes();
+        vis.conectar();
         arr = vis.cargar();
+        vis.desconectar();
       
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();
-//        for (int i = 0; i < arr.size(); i++) {
-//            
-//        dataset.addValue(arr.get(i).getEdad(), String.valueOf(arr.get(i).getId_Estudiante()), "Estudiante ID:"+String.valueOf(arr.get(i).getId_Estudiante()));   
-//           
-//           
-//        }
+        for (int i = 0; i < arr.size(); i++) {
+            
+        dataset.addValue(arr.get(i).getEdad(), String.valueOf(arr.get(i).getId_Estudiante()), "Estudiante ID:"+String.valueOf(arr.get(i).getId_Estudiante()));   
+           
+           
+        }
 
-        dataset.addValue(10,"hola","pepe");   
-        dataset.addValue(15,"l.ad","peasdpe");   
-         
+      
+ 
         
 
         JFreeChart chart = ChartFactory.createBarChart(
